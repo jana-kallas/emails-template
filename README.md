@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Deploying the React Email preview
+
+To deploy the same preview that `npm run dev` shows:
+
+1. Install dependencies (first run only): `npm install`.
+2. Export the preview: `npm run export` (runs `email export --outDir .react-email/out`).
+3. Deploy the contents of `.react-email/out` with any static host.
+   - On hosts with build settings (Vercel, Netlify, etc.), set the build command to `npm run export` and the publish/output directory to `.react-email/out`.
+   - For manual uploads, zip that directory or serve it with a static file server such as `npx serve .react-email/out`.
+
+You can keep the CRA build flow (`npm run build`) if you still need it, but for the email template preview your production host should now serve `.react-email/out`.
