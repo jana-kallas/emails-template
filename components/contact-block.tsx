@@ -3,7 +3,7 @@ import React from "react";
 export default function ContactBlock() {
     return(
         <>
-        <div className="text-center text-black font-public w-[70%] mx-auto p-20">
+        <div className="text-center text-black font-public w-[500px] mx-auto py-20">
             <p className="font-extrabold text-4xl -tracking-[1px] m-0">
             If you need any assistance, please
                 do not hesitate to contact us
