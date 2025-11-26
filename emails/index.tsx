@@ -10,7 +10,7 @@ const tailwindConfig = require("../tailwind.config");
 export default function Email() {
   return (
     <Tailwind config={tailwindConfig}>
-      <Html>
+      <Html className="max-w-[700px] mx-auto">
         <Header
           header="https://i.ibb.co/N2ncnSgk/provide-poa-en.webp"
           altText="POA Header"
