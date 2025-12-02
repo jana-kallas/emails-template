@@ -1,7 +1,14 @@
 
 
 import React from "react";
-export default function Header({header, altText}) {
+
+type HeaderProps = {
+  header: string;
+  altText: string;
+};
+
+export default function Header({ header, altText }: HeaderProps) {
+    
     return(
         <>
         <div className="w-full">

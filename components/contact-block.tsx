@@ -1,16 +1,24 @@
 
 import React from "react";
-export default function ContactBlock() {
+type ContactProps = {
+  contactText: string;
+};
+export default function ContactBlock({contactText} : ContactProps) {
     return(
         <>
-        <div className="text-center text-black font-public w-[500px] mx-auto py-20">
-            <p className="font-extrabold text-4xl -tracking-[1px] m-0">
-            If you need any assistance, please
-                do not hesitate to contact us
-                directly. We will be happy to help.
+        <div className="text-center text-black font-public mx-auto py-8">
+            <p className="font-extrabold text-xl leading-tight -tracking-[1px] m-0">
+                {contactText}
+            
             </p>
-            <div className="text-2xl mt-10">
-                <a href="tel: +44 2033016473" className="text-black">+44 2033016473</a> | <a href="mailto: cs@4t.com" className="text-black">cs@4t.com</a>
+            <div className="text-base mt-10">
+                 <span dir="ltr" className="inline-block">
+                    <a href="tel:+442033016473" className="text-black">+44 2033016473</a>
+                </span>
+                {" | "}
+                <span dir="ltr" className="inline-block">
+                    <a href="mailto:cs@4t.com" className="text-black">cs@4t.com</a>
+                </span>
             </div>
         </div>
         </>
